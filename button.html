@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	   <meta charset="utf-8" />
+	   <title>A Button I guess</title>
+	</head>
+	<body>
+	   <h1> Cette une site Web en Francais </h1>
+	   <p> Je vais ecrire en francais pour toute cette page </p>
+	   <p> Je le fait parce que je veux le practiquer. Un jour je veux retourner a Paris </p>
+	   <p id="foo"> Une ligne plus </p>
+	   <input type="button" onclick="changeText()" value="Cliquez sur moi" />
+
+	   <script 
+  	       src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	   <script type="text/javascript">
+		function changeText() {
+			$("#foo").html("eyyyyy this is english");
+			$("#foo").fadeOut();
+		}
+	
+           </script>
+	</body>
+</html>
