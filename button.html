@@ -6,11 +6,16 @@
 	   <title>A Button I guess</title>
 	</head>
 	<body>
-	   <h1> Cette une site Web en Francais </h1>
-	   <p> Je vais ecrire en francais pour toute cette page </p>
+	   <h1 id="boom"> Cette une site Web en Francais </h1>
+	   <p id="joe"> Je vais ecrire en francais pour toute cette page </p>
 	   <p> Je le fait parce que je veux le practiquer. Un jour je veux retourner a Paris </p>
 	   <p id="foo"> Une ligne plus </p>
-	   <input type="button" onclick="changeText()" value="Cliquez sur moi" />
+
+	   <input type="button" onclick="changeText()" value="Cliquez sur moi" /> </br>
+           <input type="button" onclick="changeText2()" value="Cliquez sur moi aussi" /> </br>
+           <input type="button" onclick="changeColor()" value="Je suis une bouton" /> </br>
+           <input type="button" onclick="hidejoe()" value="Bon, c'est le quatrième bouton" /> </br>
+           <input type="button" onclick="oh()" value="C'est l'ultime bouton" /> </br>
 
 	   <script 
   	       src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -20,7 +25,24 @@
 			$("#foo").html("eyyyyy this is english");
 			$("#foo").fadeOut();
 		}
-	
+
+                function changeText2() {
+                        $("#foo").html("Desole c'est ma faute.");
+                        $("#foo").fadeIn();
+                } 
+
+               function changeColor() {
+                        $("#boom").css("color", "red");
+                        $("#boom").css("border", "solid 5px #ccc");
+                } 
+
+		function hidejoe() {
+			$("#joe").hide("slow");
+		}
+		
+		function oh() {
+			$("#joe").append("Où est le texte qui a disparu);
+		}
            </script>
 	</body>
 </html>
