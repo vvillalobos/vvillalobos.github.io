@@ -7,37 +7,53 @@
 	</head>
 	<body>
 	   <h1 id="boom"> Cette une site Web en Francais </h1>
+           <input type="button" onclick="oh()" value="Cliquez sur moi s'il te plait" /> </br>
+	   <input type="button" onclick="changeColor()" value="Je suis une bouton" /> </br> 
+
 	   <p id="joe"> Je vais ecrire en francais pour toute cette page </p>
 	   <p> Je le fait parce que je veux le practiquer. Un jour je veux retourner a Paris </p>
+           <input type="button" onclick="hidejoe()" value="Une Autre" /> </br>
+	   <p id="mark"> Paris est très belle. Je ne comprends pas </p>
 	   <p id="foo"> Une ligne plus </p>
-
-	   <input type="button" onclick="changeText()" value="Cliquez sur moi" /> </br>
-           <input type="button" onclick="changeText2()" value="Cliquez sur moi aussi" /> </br>
-           <input type="button" onclick="changeColor()" value="Je suis une bouton" /> </br>
-           <input type="button" onclick="hidejoe()" value="Bon, c'est le quatrième bouton" /> </br>
-           <input type="button" onclick="oh()" value="C'est l'ultime bouton" /> </br>
+	   <input type="button" onclick="changeText()" value="Bobn, c'est le quatrième bouton" /> </br>
+           <input type="button" onclick="changeText2()" value="Ne m'oubliez pas!" /> </br>
 
 	   <script 
   	       src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 	   <script type="text/javascript">
 		function changeText() {
+			//adds text and fades out
 			$("#foo").html("eyyyyy this is english");
 			$("#foo").fadeOut();
 		}
 
                 function changeText2() {
+			//fades in and adds text
                         $("#foo").html("Desole c'est ma faute.");
                         $("#foo").fadeIn();
                 } 
 
                function changeColor() {
+			//changes header to red and add border
                         $("#boom").css("color", "red");
                         $("#boom").css("border", "solid 5px #ccc");
                 } 
 
 		function hidejoe() {
+			//disappears a line of text
 			$("#joe").hide("slow");
+		}
+
+		function oh() {
+			$("p").animate(
+		  	 {
+			     opacity: .3,
+			     width: "500px",
+			     height: "100px"
+			}
+			);
+			$("#mark").html("Peut-etre un jour j'iras au Mexique.");
 		}
 		
            </script>
