@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,800);
+body {
+  font-family: Alegreya Sans;
+  font-size: 16pt;
+  background-color: #a9cfef;
+  margin: 2em;
+}
+
+h2{
+  font-weight:800;
+  text-align: center;
+}
+
+h4{
+  color: #998;
+  font-weight:500;
+  line-height: .6;
+}
+
+p {
+  font-weight:300;
+  color: #ffffff;
+  font-size: 14pt;
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+}
+
+li {
+  font-weight:300;
+}
+
+img {
+  width:320px;
+
+  border: #ddd;
+}
+
+#oh {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.left {
+  float: left;
+  width: 350px;
+  height: 250px;
+}
+
+.right{
+  float: right;
+  width: 450px;
+  vertical-align: center;
+  line-height:1.0;
+  height: 250px;
+}
+
+#eyy {
+  width: 950px;
+  margin: 0 auto;
+}
+
+#sidebar {
+  float: left;
+  width: 350px;
+
+}
+
+#nation {
+  float: right;
+  width: 500px;
+  line-height:1.0;
+  margin: 1em;
+
+}
+
