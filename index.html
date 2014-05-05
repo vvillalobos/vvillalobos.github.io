@@ -3,21 +3,91 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>About Me</title>
-	<link rel="stylesheet" type="text/css" href="indexcss.css">
-    </head>
-    <body>
-	<h3 class="one">  Hi, my name is Vianey Villalobos  </h3>
-	<center> <img src="http://distilleryimage2.s3.amazonaws.com/b51ba5b2ad5d11e3a7f412f205c15b1e_8.jpg" /> </center>
-	<h4 class="one">  A Few Things You Might Care To Know </h4>
-	<ul>
-	  <li> I'm 17 years old. </li> 
-	  <li> I'm trilingual. </li> 
-	  <li> I'm an only child. </li> 
-	  <li> My favorite movie is the Lion King. </li> 
-	  <li> My favorite color is blue. </li> 
-	</ul> 
-	<p> And welcome to my github page. </p>
-	Date()
-    </body>
+		<link rel="stylesheet" type="text/css" href="incss.css">
+		<title> Welcome </title>
+	</head>
+
+	<body>
+		<h2> Hi, I'm Vianey Villalobos </h2>
+		<p> “It's a metaphor, see: You put the killing thing right between your teeth, but you don't give it the power to do its killing.” </p>
+		<p> - John Green, The Fault in Our Stars </p>
+		<div id="oh">
+			<div class="left">
+				<img alt="Paris 2k14" title="Paris 2k14" src="https://googledrive.com/host/0B0BtrlTR3XroOGJLTDFZUUxUUVE/331.JPG"/>
+			</div>
+
+			<div class="right">
+				<h4 class="one"> Things You Might Care To Know </h4>
+				<ul>
+				  <li> I'm 17 years old. </li> 
+				  <li> I'm trilingual. </li> 
+				  <li> I'm an only child. </li> 
+				  <li> My favorite movie is the Lion King. </li> 
+				  <li> My favorite color is blue. </li> 
+				</ul> 
+				<h6> <a href="https://www.youtube.com/watch?v=GfwiPQExH_E">Want to Listen to A Spanish Song?</a>
+				<a href="https://www.youtube.com/watch?v=igASbnqpUo8">A French Song??</a> </h6>
+			</div>
+		</div> </br>
+		<h6> Something's not Right,
+			 Maybe the heading should be... </br>
+		<input type="button" onclick="changeColor()" value="White!." />
+		<input type="button" onclick="changeColor2()" value="Blue!." /> </h6>
+		<hr>
+
+		<div id="eyy">
+			<div id="sidebar">
+				<h4 class="one"> Want to see my other Web Pages? </h4>
+					<ul>
+            			<li> <a href="/lyrics.html">Lyrics Page</a> </li>
+            			<li> More to come soon! </li>
+            		</ul>
+				<h4 class="one"> Favorite Youtube Videos </h4>
+				<iframe width="340" height="255" src="https://www.youtube.com/embed/eNCab-6ucLM?rel=0" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+			</div>
+			<div id="nation">
+				<h4 class="one">  My Hobbies  </h4>
+				<ul>
+				  <li> drawing, making collages </li>
+				  <li> listening to music</li>
+				  <li> watching movies </li>
+				  <li> Tumblr </li>
+				</ul>
+				
+
+				<h4 class="one">  Random Facts  </h4>
+				<ul>
+				  <li> I'm exactly 5 feet tall.</li>
+				  <li> I'm ambidextrous. </li>
+				  <li> I lost my ability to whistle once I got braces. </li>
+				  <li> I've only traveled outside of California twice. </li>
+				  <li id="mine"> I have adopted 5 dogs in the past 6 years. </li>
+				</ul>
+				<p> One of these is a lie... 
+				 <input type="button" onclick="himine()" value="♫" /> </p>
+			</div>
+		</div>
+
+		<script 
+  	       src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
+
+		<script type="text/javascript">
+			function himine() {
+				$("#mine").html("I actually don't own any pets.");
+				$("#mine").show();
+			}
+			function changeColor() {
+			//changes header to red and add border
+                $(".one").css("color", "white");
+            }
+
+            function changeColor2() {
+			//changes header to red and add border
+                $(".one").css("color", "blue");
+            }
+
+        </script>
+	</body>
 </html>
