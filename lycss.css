@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker|Rammetto+One|Delius+Unicase|Rock+Salt|Inconsolata|Righteous);
+
+body, html {
+  background-color: #093251;
+  text-align: center;
+  line-height:1.3;
+  font-size:16pt;
+  margin:2em;
+}
+
+p, h6 {
+  font-family: Inconsolata;
+  color: #5A5C5E;
+}
+
+h1 {
+  font-family: Rock Salt;
+  line-height:1.3;
+  text-decoration: underline;
+  
+}
+
+h2 {
+  font-family:Permanent Marker;
+  line-height:.9;
+  color: #111112;
+}
+
+h3 {
+  font-family:Permanent Marker;
+  line-height:.9;
+  text-decoration: underline;
+}
+
+#columns {
+  width:1000px;
+  margin: 0 auto;
+}
+
+.leftcolumn {
+  float:left;
+  width: 53%;
+ }
+
+.rightcolumn {
+  float:right;
+  width: 43%;
+ }
+
+img {
+  width: 400px;
+}
