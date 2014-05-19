@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	   <meta charset="utf-8" />
+	   <title>Guessing Game</title>
+	</head>
+	<body>
+	   <script>
+		var number = 10
+		var a = prompt("Welcome to the Guessing Game! Guess a number between 1-10");
+		while (a != 10) {
+	  	   if ( a < 5) {
+			var a = prompt("Guess too low. Guess again!");	
+	  	   }
+	  	   else {
+			var a = prompt("Guess too high. Guess again!");
+	           } 
+		};
+		if ( a == 10) {
+			alert("YOU WON.");
+		}
+	   </script>
+	</body>
+</html>
