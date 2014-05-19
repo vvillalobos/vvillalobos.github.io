@@ -6,9 +6,9 @@
 	</head>
 	<body>
 	   <script>
-		var number = 10
+		var number = Math.floor(Math.random()*11) 
 		var a = prompt("Welcome to the Guessing Game! Guess a number between 1-10");
-		while (a != 10) {
+		while (a != number) {
 	  	   if ( a < 5) {
 			var a = prompt("Guess too low. Guess again!");	
 	  	   }
@@ -16,7 +16,7 @@
 			var a = prompt("Guess too high. Guess again!");
 	           } 
 		};
-		if ( a == 10) {
+		if ( a == number) {
 			alert("YOU WON.");
 		}
 	   </script>
