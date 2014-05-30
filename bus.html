@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+    <script type="text/processing" data-processing-target="targetcanvas">
+      void setup() 
+      {
+        size(400, 400); 
+        colorMode(RGB, 255, 255, 255, 100);
+      }
+      
+        var xPos = 50; // start position
+        var xBus = 20;
+        var ySun = 50;
+        var xSun = 322;
+        var yMoon = 267;
+        var xMoon = 60;
+        
+      void draw()
+      {
+        background(255, 255, 255);
+        
+        //sun
+        noStroke();
+        fill(234, 245, 19);
+        ellipse(xSun, ySun, 87, 86);
+        xSun -= 0.7;
+        ySun ++;
+        
+        //moon
+        noStroke();
+        fill(191, 191, 157);
+        ellipse(xMoon, yMoon, 87, 86); 
+        if (ySun > 267) {
+            
+            xMoon += 0.8;
+            yMoon --;    
+            
+        }
+    
+        stroke(18, 9, 9);
+        fill(50, 56, 49);
+        rect(0, 215, 400, 215);
+        
+        //the bus
+        fill(255, 0, 0);
+        noStroke();
+        rect(xBus, 200, 114, -51);
+        arc(xBus+57, 152, 114, 57, -180, 0);
+        
+        //windows
+        stroke(18,9,9);
+        fill(255, 255, 255,50);
+        //fill(0,0,0,0);
+        rect(xBus+106, 180, -23, -23);
+        
+        fill(0, 0, 0);
+        ellipse(xPos, 200, 30, 30); // a wheel
+        ellipse(xPos+65, 200, 30, 30); // a wheel
+        fill(255, 255, 255);
+        ellipse(xPos, 200, 10, 10);
+        ellipse(xPos+65, 200, 10, 10);
+        
+        xBus ++;
+        xPos ++;
+      }
+
+    </script>    
+  </head>
+
+  <body>
+    <canvas id="targetcanvas" width="400" height="400"></canvas>
+  </body>
+</html>
