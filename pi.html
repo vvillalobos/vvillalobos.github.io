@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+  <script type="text/processing" data-processing-target="targetcanvas">
+    void setup() {
+      size(400, 440);
+      noStroke();
+      //colorMode(RGB, 255, 255, 255, 100);
+      //rectMode(CENTER);      
+      frameRate(35);
+    
+    }
+
+    var a = 0;
+    var b = 0;
+    var s = 1;
+    var q = prompt("Please enter desired number of dots.\n Preferably above 1500.");
+    
+    void points() {
+     strokeWeight(7);
+     var x = random(0,400);
+     var y = random (0,400);
+     var z = abs(dist(200, 200, x, y));
+        if (z < 200) {
+            fill(255, 0, 0);
+            noStroke();
+            ellipse(x,y,5,5);
+            b++;
+            a++;
+        }
+        else{
+            fill(0, 0, 0);
+            noStroke();
+            ellipse(x,y,5,5);
+            a++;
+        } 
+        s++;
+        var l = (4*b)/a;
+      return l;
+    };
+
+    void draw(){
+      points();
+      if (s > q - 1){
+        text("Pi is supposedly:", 20, 410);
+        text(points(), 20, 430);
+        noLoop(); 
+      }
+    };
+
+    void mouseClicked(){
+      noLoop();
+    }
+  </script>
+</head>
+
+  <body>
+    <h1> Welcome!</h1>
+    <h2> To a Monte Carlo Pi Estimation Simulation</h2>
+    <canvas id="targetcanvas" width="400" height="400"></canvas>
+    <p> Don't want to wait anymore? <br>
+      Click the simulation to stop it.</p>
+  
+  </body>
+
+</html>
