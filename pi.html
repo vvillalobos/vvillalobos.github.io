@@ -46,8 +46,11 @@
     void draw(){
       points();
       if (s > q - 1){
-        text("Pi is supposedly:", 20, 418);
-        text(points(), 20, 430);
+        fill(0,0,0);
+        rect(200,200-20,100,50)
+        fill(255,0,0);
+        text("Pi is supposedly:", 202, 200);
+        text(points(), 202, 225);
         noLoop(); 
       }
     };
@@ -58,13 +61,13 @@
   </script>
 </head>
 
-  <body>
-    <h1> Welcome!</h1>
-    <h2> To a Monte Carlo Pi Estimation Simulation</h2>
-    <canvas id="targetcanvas" width="400" height="400"></canvas>
-    <p> Don't want to wait anymore? <br>
-      Click the simulation to stop it.</p>
-  
-  </body>
+<body>
+  <h1> Welcome!</h1>
+  <h2> To a Monte Carlo Pi Estimation Simulation</h2>
+  <canvas id="targetcanvas" width="400" height="400"></canvas>
+  <p> Don't want to wait anymore? <br>
+    Click the simulation to stop it.</p>
+
+</body>
 
 </html>
