@@ -12,155 +12,192 @@
       colorMode(RGB, 255, 255, 255, 100);
       //rectMode(CENTER);      
     }
-    
-    var l = 0;
-    var k = 215
 
     var ySun = 50;
     var xSun = 322;
     var yMoon = 267;
     var xMoon = 60;
-    var back = 260;
+    var back = 240;
     var leftX = 120;
     var rightX = 200;
-    
-    // red bus
+    var build = 255;
+
+
+     // red bus
     var xPos = 50; // start position
     var xBus = 20;
-    
-    // blue bus
+
+     // blue bus
     var blue = 620;
     var wheel = 640;
-    
-    void buildings(){
-      var x = random(2,40);
-      var y = random(-85, -20);
-      rect(l, k, x, y);
-      l += 30;
-    }
-    
+
+
+
     void draw() {
 
-    
-    background(back, back+10, back+7);
-    
-    //sun
-    noStroke();
-    fill(234, 245, 19);
-    ellipse(xSun, ySun, 87, 86);
-    xSun -= 0.7;
-    ySun += 0.3;
-    
-    // clouds 
-    fill(255, 255, 255);
-    // left cloud
-    ellipse(leftX, 150, 126, 97);
-    ellipse(leftX+62, 150, 70, 60);
-    ellipse(leftX-62, 150, 70, 60);
-    leftX -= 1;
-    
-    // right cloud
-    ellipse(rightX, 100, 126, 97);
-    ellipse(rightX+62, 100, 70, 60);
-    ellipse(rightX-62, 100, 70, 60);
-    rightX += 1;
-    
-    //moon
-    noStroke();
-    fill(191, 191, 157);
-    ellipse(xMoon, yMoon, 87, 86); 
-    if (ySun > 247) {
-        if (yMoon > 10){
-        xMoon += 0.5;
-        yMoon -= 0.3;
+
+      background(back, back + 10, back + 72);
+
+      //sun
+      noStroke();
+      fill(234, 245, 19);
+      ellipse(xSun, ySun, 87, 86);
+      xSun -= 0.7;
+      ySun += 0.3;
+
+      // clouds 
+      fill(255, 255, 255);
+      // left cloud
+      ellipse(leftX, 100, 126, 97);
+      ellipse(leftX + 62, 100, 70, 60);
+      ellipse(leftX - 62, 100, 70, 60);
+      leftX -= 1;
+
+      // right cloud
+      ellipse(rightX, 100, 126, 97);
+      ellipse(rightX + 62, 100, 70, 60);
+      ellipse(rightX - 62, 100, 70, 60);
+      rightX += 1;
+
+      //moon
+      noStroke();
+      fill(191, 191, 157);
+      ellipse(xMoon, yMoon, 87, 86);
+      if (ySun > 247) {
+        if (yMoon > 10) {
+          xMoon += 0.5;
+          yMoon -= 0.3;
         }
-    }
-    
-    //street
-    noStroke();
-    fill(122, 120, 116);
-    rect(0, 215, 600, 215);
-    fill(33, 31, 24);
-    rect(0, 240, 607, 127);
-    stroke(140, 140, 140);
-    strokeWeight(5);
-    line(0,239,600,239);
-    line(0,370,600,370);
-    stroke(230, 153, 60);
-    line(0,295,600,295);
-    line(0,304,600,304);
-    
-    //the red bus
-    fill(255, 0, 0);
-    noStroke();
-    rect(xBus, 256, 114, -50);
-    arc(xBus+57, 206, 114, 70, -180, 0);
-    
-    //rb wheels
-    fill(0, 0, 0);
-    ellipse(xPos, 256, 30, 30); // a wheel
-    ellipse(xPos+65, 256, 30, 30); // a wheel
-    fill(255, 255, 255);
-    ellipse(xPos, 256, 10, 10);
-    ellipse(xPos+65, 256, 10, 10);
-    
-    //rb windows
-    stroke(18,9,9);
-    strokeWeight(3);
-    fill(255, 255, 255);
-    rect(xBus+106, 229, -23, -23);
-    
-    //the blue bus
-    fill(54, 67, 209);
-    noStroke();
-    rect(blue, 330, 114, -50);
-    arc(blue+57, 276, 114, 70, -180, 0);
-    // bb wheels
-    fill(0, 0, 0);
-    ellipse(wheel, 330, 30, 30); // a wheel
-    ellipse(wheel+65, 330, 30, 30); // a wheel
-    fill(255, 255, 255);
-    ellipse(wheel, 330, 10, 10);
-    ellipse(wheel+65, 330, 10, 10);
-    // windows
-    stroke(18,9,9);
-    strokeWeight(3);
-    fill(255, 255, 255);
-    rect(blue+36, 295, -23, -23);
-    
-    
-    xBus += 0.6;
-    xPos += 0.6;
-    blue -=0.6;
-    wheel -=0.6;
-    back -=0.2;
-    
+      }
 
-};
+      // buildings
+      stroke(18, 9, 9);
+      strokeWeight(1);
 
-  void keyPressed(){
-    if (keyCode == DOWN) {
-      noLoop();
 
+      fill(build - 82, build + 100, build - 50);
+      rect(0, 215, 80, -70);
+      fill(89, 61, 37);
+      rect(20, 215, 20, -40);
+
+
+      fill(build - 202, build - 200, build - 20);
+      rect(83, 215, 100, -90);
+      fill(89, 61, 37);
+      rect(100, 215, 20, -40);
+
+
+      fill(build - 10, build - 240, build - 200);
+      rect(200, 215, 160, -70);
+      fill(89, 61, 37);
+      rect(250, 215, 20, -40);
+
+      fill(build + 2, build - 50, build - 70);
+      rect(370, 215, 50, -98);
+      fill(89, 61, 37);
+      rect(385, 215, 15, -40);
+
+      fill(build - 20, build - 90, build - 10);
+      rect(423, 215, 90, -85);
+      fill(89, 61, 37);
+      rect(460, 215, 20, -40);
+
+      fill(build - 10, build - 100, build - 232);
+      rect(530, 215, 100, -110);
+      fill(89, 61, 37);
+      rect(560, 215, 20, -40);
+
+      //street
+      noStroke();
+      fill(122, 120, 116);
+      rect(0, 215, 600, 215);
+      fill(33, 31, 24);
+      rect(0, 240, 607, 127);
+      stroke(140, 140, 140);
+      strokeWeight(5);
+      line(0, 239, 600, 239);
+      line(0, 370, 600, 370);
+      stroke(230, 153, 60);
+      line(0, 295, 600, 295);
+      line(0, 304, 600, 304);
+
+      //the red bus
+      fill(255, 0, 0);
+      noStroke();
+      rect(xBus, 256, 114, -50);
+      arc(xBus + 57, 206, 114, 70, -180, 0);
+
+      //rb wheels
+      fill(0, 0, 0);
+      ellipse(xPos, 256, 30, 30); // a wheel
+      ellipse(xPos + 65, 256, 30, 30); // a wheel
+      fill(255, 255, 255);
+      ellipse(xPos, 256, 10, 10);
+      ellipse(xPos + 65, 256, 10, 10);
+
+      //rb windows
+      stroke(18, 9, 9);
+      strokeWeight(3);
+      fill(255, 255, 255);
+      rect(xBus + 106, 229, -23, -23);
+
+      //the blue bus
+      fill(54, 67, 209);
+      noStroke();
+      rect(blue, 330, 114, -50);
+      arc(blue + 57, 276, 114, 70, -180, 0);
+      // bb wheels
+      fill(0, 0, 0);
+      ellipse(wheel, 330, 30, 30); // a wheel
+      ellipse(wheel + 65, 330, 30, 30); // a wheel
+      fill(255, 255, 255);
+      ellipse(wheel, 330, 10, 10);
+      ellipse(wheel + 65, 330, 10, 10);
+      // windows
+      stroke(18, 9, 9);
+      strokeWeight(3);
+      fill(255, 255, 255);
+      rect(blue + 36, 295, -23, -23);
+
+
+      xBus += 0.4;
+      xPos += 0.4;
+      blue -= 0.6;
+      wheel -= 0.6;
+      back -= 0.2;
+
+
+    };
+
+    void keyPressed() {
+      if (keyCode == DOWN) {
+        noLoop();
+
+      }
+      if (keyCode == UP) {
+        loop();
+      }
+
+      if (keyCode == RIGHT) {
+        build -= 7;
+      }
+
+      if (keyCode == LEFT) {
+        build += 13;
+      }
     }
-    if (keyCode == UP){ 
-      loop();
-    }
-    
-    if (keyCode == ENTER) {
-      buildings();
-    }
-  }
-  
   </script>
 </head>
 
 <body>
   <h1> What a Lovely Day</h1>
   <canvas id="targetcanvas" width="400" height="400"></canvas>
-  <p id="oi"> (Make sure to click on the simulation first) </p>
-  <p> * Press the DOWN arrow key to stop the simmulation <br>
-    * Press the UP arrow key to continue it.</p>
+  <p id="oi">(Make sure to click on the simulation first)</p>
+  <p>*Pressing the RIGHT arrow key changes the buildings' color*</p>
+  <p id="oi">The LEFT Key changes the color also.</p>
+  <p>* Press the DOWN arrow key to stop the simmulation*
+    <br>* Press the UP arrow key to continue it*</p>
+
 
 </body>
 
