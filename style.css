@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,800);
+body, html {
+  font-family: Alegreya Sans;
+  font-size: 16pt;
+  background-color: #a9cfef;
+  margin: 2em;
+  text-align: center;
+}
+
+
+p {
+  font-weight:300;
+  color: #ffffff;
+  font-size: 14pt;
+}
+
+h1{
+  font-weight:800;
+
+}
