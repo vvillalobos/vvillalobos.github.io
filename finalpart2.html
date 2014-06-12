@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+
+  <script data-require="processing.js@*" data-semver="1.4.1" src="//cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing.min.js"></script>
+  <script type="text/processing" data-processing-target="targetcanvas">
+    void setup() {
+      size(600, 400);
+      noStroke();
+      colorMode(RGB, 255, 255, 255, 100);
+      //rectMode(CENTER);      
+    }
+    
+    var l = 0;
+    var k = 215
+
+    var ySun = 50;
+    var xSun = 322;
+    var yMoon = 267;
+    var xMoon = 60;
+    var back = 260;
+    var leftX = 120;
+    var rightX = 200;
+    
+    // red bus
+    var xPos = 50; // start position
+    var xBus = 20;
+    
+    // blue bus
+    var blue = 620;
+    var wheel = 640;
+    
+    void buildings(){
+      var x = random(2,40);
+      var y = random(-85, -20);
+      rect(l, k, x, y);
+      l += 30;
+    }
+    
+    void draw() {
+
+    
+    background(back, back+10, back+7);
+    
+    //sun
+    noStroke();
+    fill(234, 245, 19);
+    ellipse(xSun, ySun, 87, 86);
+    xSun -= 0.7;
+    ySun += 0.3;
+    
+    // clouds 
+    fill(255, 255, 255);
+    // left cloud
+    ellipse(leftX, 150, 126, 97);
+    ellipse(leftX+62, 150, 70, 60);
+    ellipse(leftX-62, 150, 70, 60);
+    leftX -= 1;
+    
+    // right cloud
+    ellipse(rightX, 100, 126, 97);
+    ellipse(rightX+62, 100, 70, 60);
+    ellipse(rightX-62, 100, 70, 60);
+    rightX += 1;
+    
+    //moon
+    noStroke();
+    fill(191, 191, 157);
+    ellipse(xMoon, yMoon, 87, 86); 
+    if (ySun > 247) {
+        if (yMoon > 10){
+        xMoon += 0.5;
+        yMoon -= 0.3;
+        }
+    }
+    
+    //street
+    noStroke();
+    fill(122, 120, 116);
+    rect(0, 215, 600, 215);
+    fill(33, 31, 24);
+    rect(0, 240, 607, 127);
+    stroke(140, 140, 140);
+    strokeWeight(5);
+    line(0,239,600,239);
+    line(0,370,600,370);
+    stroke(230, 153, 60);
+    line(0,295,600,295);
+    line(0,304,600,304);
+    
+    //the red bus
+    fill(255, 0, 0);
+    noStroke();
+    rect(xBus, 256, 114, -50);
+    arc(xBus+57, 206, 114, 70, -180, 0);
+    
+    //rb wheels
+    fill(0, 0, 0);
+    ellipse(xPos, 256, 30, 30); // a wheel
+    ellipse(xPos+65, 256, 30, 30); // a wheel
+    fill(255, 255, 255);
+    ellipse(xPos, 256, 10, 10);
+    ellipse(xPos+65, 256, 10, 10);
+    
+    //rb windows
+    stroke(18,9,9);
+    strokeWeight(3);
+    fill(255, 255, 255);
+    rect(xBus+106, 229, -23, -23);
+    
+    //the blue bus
+    fill(54, 67, 209);
+    noStroke();
+    rect(blue, 330, 114, -50);
+    arc(blue+57, 276, 114, 70, -180, 0);
+    // bb wheels
+    fill(0, 0, 0);
+    ellipse(wheel, 330, 30, 30); // a wheel
+    ellipse(wheel+65, 330, 30, 30); // a wheel
+    fill(255, 255, 255);
+    ellipse(wheel, 330, 10, 10);
+    ellipse(wheel+65, 330, 10, 10);
+    // windows
+    stroke(18,9,9);
+    strokeWeight(3);
+    fill(255, 255, 255);
+    rect(blue+36, 295, -23, -23);
+    
+    
+    xBus += 0.6;
+    xPos += 0.6;
+    blue -=0.6;
+    wheel -=0.6;
+    back -=0.2;
+    
+
+};
+
+  void keyPressed(){
+    if (keyCode == DOWN) {
+      noLoop();
+
+    }
+    if (keyCode == UP){ 
+      loop();
+    }
+    
+    if (keyCode == ENTER) {
+      buildings();
+    }
+  }
+  
+  </script>
+</head>
+
+<body>
+  <h1> What a Lovely Day</h1>
+  <canvas id="targetcanvas" width="400" height="400"></canvas>
+  <p> * Press the DOWN arrow key to stop the simmulation <br>
+    * Press the UP arrow key to continue it.</p>
+
+</body>
+
+</html>
